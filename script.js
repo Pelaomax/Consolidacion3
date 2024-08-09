@@ -6,7 +6,7 @@ const media = window.matchMedia('(max-width: 768px)');
 
 function setupListeners() {
     if (media.matches) {
-        chatSection.style.visibility = 'hidden';
+        // chatSection.style.visibility = 'hidden';
         contactsSection.style.display = 'block';
         contactItems.forEach(item => {
             item.addEventListener('click', handleContactClick);
@@ -23,12 +23,16 @@ function setupListeners() {
 }
 
 function handleContactClick() {
-    chatSection.style.visibility = 'visible';
+    
+    // chatSection.style.display = 'block';
     contactsSection.style.display = 'none';
+    // document.querySelector('.rightSide').style.visibility="visible"
+    document.querySelector('.rightSide').style.display="flex"
 }
 
 function handleBackClick() {
-    chatSection.style.visibility = 'hidden';
+    // alert('regreso')
+    chatSection.style.display = 'none';
     contactsSection.style.display = 'block';
 }
 

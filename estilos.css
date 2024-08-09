@@ -39,6 +39,14 @@ body{
     background: #e5ddd5;
 }
 
+.rightSide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+
+}
+
 .container .rightSide::before {
     content: '';
     position: absolute;
@@ -269,6 +277,7 @@ body{
 .chat-footer {
     position: relative;
     text-align: center;
+    
 }
 .chat-footer-input{
     width: 80%;
@@ -292,18 +301,22 @@ body{
     #back{
         display: none;
     }
+
 }
 
 
 
 @media (max-width: 768px) {
+    body{
+        height: auto;
+    }
 
     .container {
         display: block;
     }
 
     .rightSide {
-        visibility: hidden;
+        display: none;
         width: 100vw;
         height: 100vw;
     }
